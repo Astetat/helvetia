@@ -1,0 +1,13 @@
+<div class="line">
+  <div *ngIf="!listComponent" style="display:flex; flex-flow: row nowrap">
+    <button class="btn" (click)="toggleServerActive()"><i  [ngClass]="server.active ? 'fa fa-toggle-on' : 'fa fa-toggle-off'"></i></button>
+    <button [ngClass]="server.active ? 'btnCircle' : 'btnCircleEmpty'"  disabled><i class="fa fa-circle"></i></button>
+  </div>
+
+  <div style="width: 100%">
+    <div class="form-group has-error">
+      <input [ngClass]="isLabelValid() ? '' : 'is-invalid'" class="form-control" [(ngModel)]="server.label">
+      <div style="margin-top: 5px"><span *ngIf="!isLabelValid()" class="text-danger">Label is invalid</span></div>
+    </div>
+  </div>
+</div>

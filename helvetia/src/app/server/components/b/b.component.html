@@ -1,0 +1,17 @@
+<h3>Liste der aktuellen Labels aller aktiven Servers</h3>
+
+<div style="margin-bottom: 10px">
+  <button class="btn" (click)="toggleLabelValidation()"><i  [ngClass]="validateLabel ? 'fa fa-toggle-on' : 'fa fa-toggle-off'"></i></button>
+  <span class="title">Validierung aktivieren / deaktivieren</span>
+</div>
+
+
+<ul class="list-group">
+  <ng-container *ngFor="let server of servers">
+    <ng-container *ngIf="server.active">
+      <helvetia-a [listComponent]="true" [server]="server"></helvetia-a>
+    </ng-container>
+  </ng-container>
+</ul>
+
+

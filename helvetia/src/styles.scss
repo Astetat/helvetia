@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.btnParent {
+  border: none;
+  font-size: 16px;
+  width: 38px;
+  height: 38px;
+}
+
+.btn {
+  @extend .btnParent;
+  color: cornflowerblue;
+  font-size: x-large;
+  padding: 0px;
+}
+
+.btn:hover {
+  color: cornflowerblue;
+}
+
+button {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+.btnCircle {
+  @extend .btnParent;
+  background-color: white;
+  color: limegreen;
+}
+
+.btnCircleEmpty {
+  @extend .btnParent;
+  background-color: white;
+  color: white;
+}

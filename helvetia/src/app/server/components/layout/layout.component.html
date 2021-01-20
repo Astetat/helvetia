@@ -1,0 +1,10 @@
+<ng-container *ngFor="let server of servers;  let i = index">
+  <mat-card style="margin-top: 10px">
+    <helvetia-a [(server)]="servers[i]"></helvetia-a>
+  </mat-card>
+</ng-container>
+
+<mat-card style="margin-top: 20px">
+  <helvetia-b [servers]="servers"></helvetia-b>
+</mat-card>
+
